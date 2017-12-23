@@ -58,51 +58,60 @@ def signIn(req):
                     }
                     return HttpResponse(json.dumps(result))
 
+@csrf_exempt
 def signup(req):
+    '''
+    注册页面
+    :param req:
+    :return:
+    '''
     if req.method == 'GET':
-        return render_to_response('login/sign-up.html')
+        return render_to_response('login/sign-up.html', context=RequestContext(req))
     if req.method == "POST":
         try:
             userid = req.POST['userid']
-            username = req.POST['UserName']
-            password = req.POST['Passwd']
+            username = req.POST['username']
+            password = req.POST['password']
         except:
-            result['status'] = 0
-            result['message'] = '获取信息失败'
+            result = {
+                'status': 0,
+                'message': "获取信息失败"
+            }
             return HttpResponse(json.dumps(result))
         else:
-            if not (varidate_char(username) and varidate_emial(email)):
-                result['message'] = '输入非法字符'
-                result['status'] = 0
-                return HttpResponse(json.dumps(result))
-            elif models.User.objects.filter(Email=email):
-                result['status'] = 0
-                result['message'] = '邮箱已经被注册'
-                return HttpResponse(json.dumps(result))
-            elif models.User.objects.filter(UserName=username):
-                result['status'] = 0
-                result['message'] = '姓名已被注册'
+            if models.User.objects.filter(userid=userid):
+                result={
+                'status': 0,
+                'message': '学号/工号已经注册'
+                }
                 return HttpResponse(json.dumps(result))
             else:
                 try:
-                    models.User.objects.create(Email=email, UserName=username, PassWord=password, Uuid=uuid.uuid1())
-                    user = models.User.objects.get(Email=email)
-                    user.Img = 'photos/2017/09/19/user/default_cdNstvn.jpg'
-                    req.session['uuid'] = str(user.Uuid)
-                    result['email'] = email
-                    result['username'] = username
-                    result['message'] = '注册成功，正在调转'
-                    result['status'] = 1
+                    models.User.objects.create(userId=userid, userName=username, password=password)
+                    user = models.User.objects.get(userId=userid)
+                    result={
+                        'userid' : userid,
+                        'username' : username,
+                        'message': '注册成功，正在调转',
+                        'status': 1
+                    }
                     return HttpResponse(json.dumps(result))
                 except Exception as e:
-                    print(e)
-                    result['status'] = 0
-                    result['message'] = '服务器异常!!'
+                    result={
+                        'status': 0,
+                        'message': '服务器异常!!'
+                    }
                     return HttpResponse(json.dumps(result))
 
 
 def grade(req):
-    return render_to_response('page/grade.html')
+    if req.method == "GET":
+        grade = models.grade.objects.all()
+        courses = models.courses.objects.all()
+        return render_to_response("page/grade.html", {"grade": grade, "courses": courses})
+    if req.method == "POST":
+        pass
+
 
 def teacher(req):
     return render_to_response('page/teacher.html')

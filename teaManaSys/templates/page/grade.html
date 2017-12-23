@@ -31,7 +31,7 @@
 
 		<!-- Theme CSS -->
 		<link href="../../static/page/css/jquery.mmenu.css" rel="stylesheet" />
-
+		<link href="../../static/page/css/bootstrap-table.css" rel="stylesheet" />
 		<!-- Page CSS -->
 		<link href="../../static/page/css/style.css" rel="stylesheet" />
 		<link href="../../static/page/css/add-ons.min.css" rel="stylesheet" />
@@ -266,7 +266,33 @@
 						</div>
 					</div>
 					<!-- End Page Header -->
+					<div>
+						<table data-toggle="table" data-url="data1.json" style="height: auto;">
+							<thead>
+								<tr>
+									<th data-field="id" data-align="center">学号</th>
+									<th data-field="id" data-align="center">姓名</th>
+									<th data-field="id" data-align="center">课程号</th>
+									<th data-field="name" data-align="center">课程名</th>
+									<th data-field="price" data-align="center">学分</th>
+									<th data-field="price" data-align="center">成绩</th>
+									<th data-field="price" data-align="center">操作</th>
+								</tr>
+							</thead>
+							<tbody>
 
+								<tr>
+									<th data-field="id" data-align="center"></th>
+									<th data-field="id" data-align="center">姓名</th>
+									<th data-field="id" data-align="center">课程号</th>
+									<th data-field="name" data-align="center">{{grade.gradeName}}</th>
+									<th data-field="price" data-align="center">学分</th>
+									<th data-field="price" data-align="center">成绩</th>
+									<th data-field="price" data-align="center">操作</th>
+								</tr>
+							</tbody>
+					</table>
+					</div>
 				</div>
 				<!-- End Main Page -->
 
@@ -309,7 +335,7 @@
 		<script src="../../static/page/plugins/jqvmap/data/jquery.vmap.sampledata.js"></script>
 		<script src="../../static/page/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
 		<script src="../../static/page/plugins/sparkline/js/jquery.sparkline.min.js"></script>
-
+		<script src="../../static/page/js/bootstrap-table.js"></script>
 		<!-- Theme JS -->
 		<script src="../../static/page/js/jquery.mmenu.min.js"></script>
 		<script src="../../static/page/js/core.min.js"></script>

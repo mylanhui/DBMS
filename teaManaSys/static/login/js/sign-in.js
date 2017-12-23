@@ -9,7 +9,7 @@ $("input[type='button']").click(function (){
             if (password === "" || password === undefined || password === null) {
 
                 swal({
-                    title:"请账号和密码",
+                    title:"请输入账号和密码",
                     text:"请填写完整信息！",
                     type:"warning"
 
