@@ -6,7 +6,7 @@
 		<!-- Basic -->
     	<meta charset="UTF-8" />
 
-		<title>成绩管理</title>
+		<title>学生管理</title>
 
 		<!-- Mobile Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -265,8 +265,162 @@
 							</button>
 						</div>
 					</div>
-					<!-- End Page Header -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin:auto">
+						<div class="modal-dialog" role="document" style="margin: 170px auto;">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">查询更多</h4>
+								</div>
+								<div class="modal-body">
 
+									<div class="form-group">
+										<label >学生姓名：高任飞</label>
+									</div>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default">2017年秋&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+										<button type="button" class="btn btn-default dropdown-toggle"
+												data-toggle="dropdown">
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+											<li><a href="#">2017年秋&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+										</ul>
+									</div>
+									<hr>
+									<div class="form-group" style="margin-top:35px;">
+										<div>
+											<table class="table" style="border: 1px solid #ddd;">
+												<tr>
+													<th style="border: 1px solid #ddd;text-align:center">学号</th>
+													<th style="border: 1px solid #ddd;text-align:center">姓名</th>
+													<th style="border: 1px solid #ddd;text-align:center">班级</th>
+													<th style="border: 1px solid #ddd;text-align:center">课程名</th>
+													<th style="border: 1px solid #ddd;text-align:center">课程号</th>
+													<th style="border: 1px solid #ddd;text-align:center">得分</th>
+												</tr>
+												<tr>
+													<td style="border: 1px solid #ddd;text-align:center">201514600231</td>
+													<td style="border: 1px solid #ddd;text-align:center">高任飞</td>
+													<td style="border: 1px solid #ddd;text-align:center">15计2</td>
+													<td style="border: 1px solid #ddd;text-align:center">数据结构</td>
+													<td style="border: 1px solid #ddd;text-align:center">H10082</td>
+													<td style="border: 1px solid #ddd;text-align:center">66</td>
+												</tr>
+												<tr>
+													<td style="border: 1px solid #ddd;text-align:center">201514600231</td>
+													<td style="border: 1px solid #ddd;text-align:center">高任飞</td>
+													<td style="border: 1px solid #ddd;text-align:center">15计2</td>
+													<td style="border: 1px solid #ddd;text-align:center">数据库原理</td>
+													<td style="border: 1px solid #ddd;text-align:center">H23589</td>
+													<td style="border: 1px solid #ddd;text-align:center">80</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class="form-group">
+										<label >平均成绩：73</label>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>确定</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Page Header -->
+					<div>
+						<table class="table" style="border: 1px solid #ddd;">
+								<tr>
+									<th style="border: 1px solid #ddd;text-align:center">学号</th>
+									<th style="border: 1px solid #ddd;text-align:center">姓名</th>
+									<th style="border: 1px solid #ddd;text-align:center">班级</th>
+									<th style="border: 1px solid #ddd;text-align:center">专业</th>
+									<th style="border: 1px solid #ddd;text-align:center">性别</th>
+									<th style="border: 1px solid #ddd;text-align:center">操作</th>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600231</td>
+									<td style="border: 1px solid #ddd;text-align:center">高任飞</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计2</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">女</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+							<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600211</td>
+									<td style="border: 1px solid #ddd;text-align:center">李彬彬</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计2</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">男</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+							<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600217</td>
+									<td style="border: 1px solid #ddd;text-align:center">张华华</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计2</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">男</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+							<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600228</td>
+									<td style="border: 1px solid #ddd;text-align:center">汪蓝彬</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计2</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">男</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600122</td>
+									<td style="border: 1px solid #ddd;text-align:center">王菲</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计1</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">女</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+							<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600102</td>
+									<td style="border: 1px solid #ddd;text-align:center">王建国</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计1</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">男</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+							<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201514600119</td>
+									<td style="border: 1px solid #ddd;text-align:center">王强</td>
+									<td style="border: 1px solid #ddd;text-align:center">15计1</td>
+									<td style="border: 1px solid #ddd;text-align:center">计算机科学与技术</td>
+									<td style="border: 1px solid #ddd;text-align:center">男</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd;text-align:center">201714570311</td>
+									<td style="border: 1px solid #ddd;text-align:center">恩彬</td>
+									<td style="border: 1px solid #ddd;text-align:center">17电信3</td>
+									<td style="border: 1px solid #ddd;text-align:center">电子信息工程</td>
+									<td style="border: 1px solid #ddd;text-align:center">男</td>
+									<td style="border: 1px solid #ddd;text-align:center">
+										<u style="color:blue">修改</u>/<u style="color:blue">查看更多</u>
+									</td>
+								</tr>
+						</table>
+					</div>
 				</div>
 				<!-- End Main Page -->
 

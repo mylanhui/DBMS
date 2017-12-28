@@ -28,6 +28,7 @@ a {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 a:hover {
   color: #29a3a3;
 }

@@ -22,7 +22,11 @@ def model(req):
     return render_to_response('model.html')
 @csrf_exempt
 def signIn(req):
-        # 用户登录
+    '''
+    登录页面
+    :param req:
+    :return:
+    '''
     if req.method == "GET":
         return render_to_response('login/sign-in.html')
     if req.method == "POST":

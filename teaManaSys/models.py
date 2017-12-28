@@ -14,7 +14,7 @@ class college(models.Model):
 
 class major(models.Model):
     majorId = models.AutoField(primary_key=True)
-    majorName =models.CharField(max_length=50)
+    majorName =models.CharField(max_length=20)
     collegeId =models.ForeignKey(college,db_column="collegeId")
 
     def __unicode__(self):
@@ -35,7 +35,7 @@ class teacher(models.Model):
     teacherName = models.CharField(max_length=10)
     teacherSex = models.BooleanField(default=0)
     collegeId = models.ForeignKey(college, db_column="collegeId")
-    teacherTitle = models.CharField(max_length=20)
+    teacherTitle = models.CharField(max_length=8)
 
     def __unicode__(self):
         return self.teacherName
@@ -43,8 +43,9 @@ class teacher(models.Model):
 class courses(models.Model):
     coursesId =models.CharField(primary_key=True,max_length=8)
     coursesName =models.CharField(max_length=40)
-    coursesTime =models.CharField(max_length=20)
+    coursesTime =models.CharField(max_length=4)
     credit =models.IntegerField()
+    start =models.CharField(max_length=10)
     teacherId =models.ForeignKey(teacher,db_column="teacherId")
 
     def __unicode__(self):
@@ -55,9 +56,8 @@ class student(models.Model):
     studentName = models.CharField(max_length=10)
     studentCourses = models.IntegerField()
     classId = models.ForeignKey(classList,db_column="classId")
-    collegeId = models.ForeignKey(college, db_column="collegeId")
-    majorId =models.ForeignKey(major,db_column="majorId")
     studentSex = models.BooleanField(default=0)
+    birthday =models.DateTimeField()
     coursesId = models.ManyToManyField(courses,db_column="coursesId")
 
     def __unicode__(self):
